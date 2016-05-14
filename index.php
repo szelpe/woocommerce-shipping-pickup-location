@@ -2,7 +2,7 @@
 /*
 Plugin Name: Local Shipping with Pickup Locations for WooCommerce
 Plugin URI: http://github.com/szelpe/woocommerce-shipping-pickup-locations
-Description: Adds the ability to WooCommerce to select pickup location for local shipping
+Description: Adds the ability to WooCommerce to select the pickup location for local shipping.
 Version: 0.0.1
 Author: Peter Szel <szelpeter@szelpeter.hu>
 Author URI: http://szelpeter.hu
@@ -12,7 +12,7 @@ License URI: http://www.gnu.org/licenses/gpl-3.0.html
 
 add_action('plugins_loaded', 'woocommerce_shipping_pickup_locations_init', 0);
 add_action('woocommerce_after_shipping_rate', 'woocommerce_shipping_pickup_locations_after_shipping_rate', 10, 2);
-add_action( 'woocommerce_checkout_update_order_meta', 'woocommerce_shipping_pickup_locations_checkout_update_order_meta' );
+add_action('woocommerce_checkout_update_order_meta', 'woocommerce_shipping_pickup_locations_checkout_update_order_meta', 10, 2);
         
             
 function woocommerce_shipping_pickup_locations_checkout_update_order_meta($order_id, $posted) {
